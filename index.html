@@ -9,7 +9,7 @@
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
@@ -21,10 +21,22 @@
     <div class="wrapper">
         <h1 class="title text-center">Welkom bij BlackJack</h1><br><br>
         <div class="main">
-            <p class="saldo-title">Saldo: <span class="saldo">100.000</span> </p><br><br><br>          
+            <p class="saldo-title">Saldo: <span class="saldo">100000</span> </p><br><br><br>          
             <p class="inzet">Uw inzet:</p>
             <input class="bet" type="text" placeholder="0"> 
-            <button onclick="play()">Zet in</button>
+            <button class="zet-in">Zet in</button>
+        </div>
+        <div class="sidebar">
+          <h5 class="title-player">Jouw Kaarten</h5>
+          <p class="player-cards"></p>
+        </div>
+        <div class="dealer">
+          <h5 class="title-dealer">Dealers Kaarten</h5>
+          <p class="dealer-cards"></p>
+        </div>
+        <div class="footer">
+          <button class="hit">Hit</button>
+          <button class="stand">Stand</button>
         </div>
     </div>
 </body>

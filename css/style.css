@@ -1,5 +1,5 @@
 body {
-    background-color: blue;
+    background-color: darkslategrey;
     margin: 0;
     padding: 0;
 }
@@ -8,7 +8,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 100px);
-    grid-template-rows: 100px 200px 200px 200px 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
 }
 
 .title {
@@ -44,4 +44,63 @@ body {
     border: 1px solid lightblue;
     width: 100px;
     height: 30px;
+}
+
+.sidebar {
+    grid-column: 6;
+    grid-row: 3;
+    color: white;
+    font-weight: bold;
+}
+
+.dealer {
+    grid-column: 6;
+    grid-row: 5;
+    color: white;
+    font-weight: bold;
+}
+
+.title-player {
+    text-align: center;
+    width: 250px;
+    font-size: 30px;
+}
+
+.player-cards {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    color: lightblue;
+    font-size: 50px;
+}
+
+
+.title-dealer {
+    text-align: center;
+    width: 250px;
+    font-size: 30px;
+}
+
+.dealer-cards {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+    color: lightblue;
+    font-size: 50px;
+}
+
+.footer {
+    grid-row: 7;
+    grid-column: 6;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.hit,
+.stand {
+    width: 100px;
+    margin-top: 5px;
+    font-weight: 500;
+    background-color: white;
+    border: 1px solid lightblue;
 }
