@@ -32,20 +32,23 @@ function playerCards() {
     }
     setTimeout(dealerCards, 3000)
 
-    if(totalPlayer < 21) {
-        let hit = document.querySelector('.hit');
-        hit.addEventListener('click', hitFunction);
-    }
+    let hit = document.querySelector('.hit');
+    hit.addEventListener('click', hitFunction);
     function hitFunction() {
-        let cardShuffleHit = numbers[Math.floor(Math.random() * numbers.length)];
-        newBalance = totalPlayer + cardShuffleHit;
-        document.querySelector('.player-cards').innerHTML = `- ${newBalance}`
-
-        function hitFunctionTwo() {
-            let cardShuffleHitTwo = numbers[Math.floor(Math.random() * numbers.length)];
-            hitBalance = newBalance + cardShuffleHitTwo;
-            document.querySelector('.player-cards').innerHTML += `${hitBalance}`
+        if(hit) {
+            let cardShuffleHit = numbers[Math.floor(Math.random() * numbers.length)];
+            newBalance = totalPlayer + cardShuffleHit;
+            document.querySelector('.player-cards').innerHTML = `- ${newBalance}`
+        } else {
+            alert('hallo')
         }
+
+
+        // if (hit) {
+        //     hitFunctionTwo()
+        // } else {
+        //     alert('werkt niet')
+        // }
     }
 }
 
@@ -58,3 +61,10 @@ function dealerCards() {
 
 let stand = document.querySelector('.stand');
 // stand.addEventListener('click', standFunction);
+
+function hitFunctionTwo() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    let cardShuffleHitTwo = numbers[Math.floor(Math.random() * numbers.length)];
+    hitBalance = newBalance + cardShuffleHitTwo;
+    document.querySelector('.player-cards').innerHTML += `${hitBalance}`
+}
